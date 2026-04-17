@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>연서를 위한 달력</title>
+
+    <style>
+        body { font-family: 'Malgun Gothic', sans-serif; padding: 20px; background-color: #f0f2f0; color: #444; }
+        .calendar-title { text-align: center; color: #556b2f; margin-bottom: 30px; font-weight: 800; font-size: 2em; }
+        
+        .calendar-container { display: flex; flex-direction: column; gap: 40px; align-items: center; }
+        
+        table { border-collapse: collapse; width: 100%; max-width: 900px; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); table-layout: fixed; }
+        th { background-color: #78866b; color: white; height: 50px; text-align: center; font-size: 0.9em; letter-spacing: 1px; }
+        
+        .sun { color: #ff8787; }
+        .sat { color: #74c0fc; }
+        
+        td { border: 1px solid #eee; vertical-align: top; padding: 0; transition: 0.3s; }
+        .day-box { padding: 12px; height: 100px; }
+        
+        .day-link {
+            display: block; 
+            text-decoration: none; 
+            color: inherit;
+            height: 100px; 
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .day-link:hover { 
+            background-color: #f9fbf9; 
+            transform: translateY(-2px);
+            box-shadow: inset 0 0 10px rgba(120, 134, 107, 0.1);
+        }
+
+        .date_num { font-weight: bold; font-size: 1.1em; display: block; margin-bottom: 8px; color: #555; }
+        
+        .event_item { 
+            font-size: 0.8em; 
+            color: white; 
+            background: #a3b18a; 
+            padding: 4px 8px; 
+            border-radius: 8px; 
+            margin-top: 5px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .highlight { background-color: #f1f3ee; }
+        .highlight .event_item { background: #d4a373; }
+
+        .month-label { 
+            font-size: 1.6em; font-weight: bold; margin-bottom: 15px; width: 100%; max-width: 900px; 
+            color: #78866b; border-bottom: 3px solid #a3b18a; padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 class="calendar-title">📅 쫑이를 기다리는 연서를 위한 일정표</h2>
+
+    <div class="calendar-container">
+        <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+            <div class="month-label">4월 (April)</div>
+            <table>
+                <tr>
+                    <th class="sun">일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th class="sat">토</th>
+                </tr>
+                <tr>
+                    <td><div class="day-box"></div></td><td><div class="day-box"></div></td>
+                    <td><div class="day-box"><span class="date_num">1</span></div></td>
+                    <td><div class="day-box"><span class="date_num">2</span></div></td>
+                    <td><div class="day-box"><span class="date_num">3</span></div></td>
+                    <td><div class="day-box"><span class="date_num">4</span></div></td>
+                    <td><div class="day-box"><span class="date_num">5</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="day-box"><span class="date_num">6</span></div></td>
+                    <td><div class="day-box"><span class="date_num">7</span></div></td>
+                    <td><div class="day-box"><span class="date_num">8</span></div></td>
+                    <td><div class="day-box"><span class="date_num">9</span></div></td>
+                    <td><div class="day-box"><span class="date_num">10</span></div></td>
+                    <td><div class="day-box"><span class="date_num">11</span></div></td>
+                    <td><div class="day-box"><span class="date_num">12</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="day-box"><span class="date_num">13</span></div></td>
+                    <td><div class="day-box"><span class="date_num">14</span></div></td>
+                    <td><div class="day-box"><span class="date_num">15</span></div></td>
+                    <td><div class="day-box"><span class="date_num">16</span></div></td>
+                    <td><div class="day-box"><span class="date_num">17</span></div></td>
+                    <td><div class="day-box"><span class="date_num">18</span></div></td>
+                    <td><div class="day-box"><span class="date_num">19</span></div></td>
+                </tr>
+                <tr>
+                    <td class="highlight">
+                        <a href="detail.html" class="day-link">
+                            <span class="date_num">20</span>
+                            <div class="event_item">★군대 입대날!</div>
+                        </a>
+                    </td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">21</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">22</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">23</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">24</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">25</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">26</span></a></td>
+                </tr>
+                <tr>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">27</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">28</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">29</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">30</span></a></td>
+                    <td><div class="day-box"></div></td><td><div class="day-box"></div></td><td><div class="day-box"></div></td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+            <div class="month-label">5월 (May)</div>
+            <table>
+                <tr>
+                    <th class="sun">일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th class="sat">토</th>
+                </tr>
+                <tr>
+                    <td><div class="day-box"></div></td><td><div class="day-box"></div></td><td><div class="day-box"></div></td><td><div class="day-box"></div></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">1</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">2</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">3</span></a></td>
+                </tr>
+                <tr>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">4</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">5</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">6</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">7</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">8</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">9</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">10</span></a></td>
+                </tr>
+                <tr>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">11</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">12</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">13</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">14</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">15</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">16</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">17</span></a></td>
+                </tr>
+                <tr>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">18</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">19</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">20</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">21</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">22</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">23</span></a></td>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">24</span></a></td>
+                </tr>
+                <tr>
+                    <td class="highlight"><a href="detail.html" class="day-link"><span class="date_num">25</span></a></td>
+                    <td class="highlight">
+                        <a href="detail.html" class="day-link">
+                            <span class="date_num">26</span>
+                            <div class="event_item">★수료식 날!</div>
+                        </a>
+                    </td>
+                    <td><div class="day-box"><span class="date_num">27</span></div></td>
+                    <td><div class="day-box"><span class="date_num">28</span></div></td>
+                    <td><div class="day-box"><span class="date_num">29</span></div></td>
+                    <td><div class="day-box"><span class="date_num">30</span></div></td>
+                    <td><div class="day-box"><span class="date_num">31</span></div></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
