@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>종원이의 소중한 기록</title>
+    <style>
+        /* 밝고 화사한 세이지 그린 & 베이지 테마 */
+        body { 
+            font-family: 'Malgun Gothic', sans-serif; 
+            background-color: #f4f7f1; /* 아주 밝은 연두빛 베이지 */
+            color: #444; 
+            margin: 0; 
+            padding: 40px 20px;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+
+        h1 { 
+            color: #556b2f; 
+            font-size: 2.2em; 
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        p { color: #78866b; margin-bottom: 40px; font-weight: bold; }
+
+        /* 영상 3구역 레이아웃 */
+        .video-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+            width: 100%; 
+            max-width: 1100px; 
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 2px solid #e2e8da;
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-title {
+            padding: 15px;
+            background-color: #f9fbf7;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            color: #556b2f;
+            text-align: center;
+        }
+
+        video { 
+            width: 100%; 
+            display: block; 
+            background-color: #000;
+        }
+
+        /* 돌아가기 버튼 */
+        .back-btn {
+            margin-top: 50px;
+            padding: 12px 30px;
+            background-color: #a3b18a;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(163, 177, 138, 0.4);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #556b2f;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>4월 20일의 쫑이 영상</h1>
+    <p>무슨 영상이 기다리고 있을지!</p>
+
+    <div class="video-grid">
+        <div class="video-card">
+            <div class="video-title">아침 영상 🌄</div>
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                브라우저가 영상을 지원하지 않습니다.
+            </video>
+        </div>
+
+        <div class="video-card">
+            <div class="video-title">점심 영상 ☕</div>
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                브라우저가 영상을 지원하지 않습니다.
+            </video>
+        </div>
+
+        <div class="video-card">
+            <div class="video-title">취침 영상 😴</div>
+            <video controls>
+                <source src="video3.mp4" type="video/mp4">
+                브라우저가 영상을 지원하지 않습니다.
+            </video>
+        </div>
+    </div>
+
+    <a href="yeonseo.html" class="back-btn">← 쫑이를 기다리는 연서를 위한 일정표로 돌아가기</a>
+
+</body>
+</html>
