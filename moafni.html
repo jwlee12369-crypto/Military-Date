@@ -27,25 +27,22 @@
 
         .video-grid { 
             display: grid; 
-            /* 카드가 2개이므로 최대 너비를 조금 줄여서 보기 좋게 배치합니다 */
-            grid-template-columns: repeat(auto-fit, minmax(300px, 450px)); 
-            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
             gap: 30px; 
             width: 100%; 
-            max-width: 1000px; 
+            max-width: 1100px; 
         }
 
         .video-card {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    border: 2px solid #e2e8da;
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* 카드 높이를 동일하게 맞춤 */
-}
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 2px solid #e2e8da;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
 
         .video-card:hover {
             transform: translateY(-5px);
@@ -77,9 +74,10 @@
             border: none;
         }
 
+        /* 사진 스타일 추가 */
         .card-photo {
             width: 100%;
-            padding: 15px;
+            padding: 15px; /* 사진 주변 여백 */
             box-sizing: border-box;
             background-color: #fff;
         }
@@ -87,7 +85,7 @@
         .card-photo img {
             width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 10px; /* 사진 모서리도 둥글게 */
             border: 1px solid #f0f0f0;
             display: block;
         }
@@ -112,26 +110,38 @@
 </head>
 <body>
 
-    <h1>편지 보내는 날!</h1>
-    <p>오늘 준비한 특별한 영상과 사진을 확인해보세요!</p>
+    <h1>★ 아침 점심 취침 ★</h1>
+    <p>오늘의 영상과 사진을 확인해보세요!</p>
 
     <div class="video-grid">
         <div class="video-card">
-            <div class="video-title">편지 고마워 연서야~!</div>
+            <div class="video-title">아침 기록 🌄</div>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/9n86jTVW8aA" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/QO4qE76dFf4" allowfullscreen></iframe>
             </div>
             <div class="card-photo">
-                <img src="event_img.jpg" alt="">
+                <img src="mimg.jpg" alt="오늘의 아침 사진">
             </div>
         </div>
 
         <div class="video-card">
-            <div class="video-title">오늘의 취침 영상 😴</div>
+            <div class="video-title">점심 기록 ☕</div>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/9n86jTVW8aA" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/B7dKoSFNW7k" allowfullscreen></iframe>
             </div>
+            <div class="card-photo">
+                <img src="aimg.jpg" alt="오늘의 점심 사진">
+            </div>
+        </div>
 
+        <div class="video-card">
+            <div class="video-title">취침 기록 😴</div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/qQr9HZ4KSRw" allowfullscreen></iframe>
+            </div>
+            <div class="card-photo">
+                <img src="nimg.jpg" alt="오늘의 취침 사진">
+            </div>
         </div>
     </div>
 
