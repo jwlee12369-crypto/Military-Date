@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>종원이의 소중한 기록</title>
+    <style>
+        /* 밝고 화사한 세이지 그린 & 베이지 테마 */
+        body { 
+            font-family: 'Malgun Gothic', sans-serif; 
+            background-color: #f4f7f1; 
+            color: #444; 
+            margin: 0; 
+            padding: 40px 20px;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+
+        h1 { 
+            color: #556b2f; 
+            font-size: 2.2em; 
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        p { color: #78866b; margin-bottom: 40px; font-weight: bold; }
+
+        .video-grid { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            justify-content: center;
+            gap: 30px; 
+            width: 100%; 
+            max-width: 1000px; 
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 2px solid #e2e8da;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-title {
+            padding: 15px;
+            background-color: #f9fbf7;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            color: #556b2f;
+            text-align: center;
+        }
+
+        /* 공통 컨테이너: 16:9 비율 유지 */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        /* 유튜브 iframe 스타일 */
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* mp4 비디오 스타일 */
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* 영상이 잘리지 않게 조정 */
+        }
+
+        .back-btn {
+            margin-top: 50px;
+            padding: 12px 30px;
+            background-color: #a3b18a;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(163, 177, 138, 0.4);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #556b2f;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>5월 11일의 쫑이 기록</h1>
+    <p>오늘 준비한 특별한 영상들을 확인해보세요!</p>
+
+    <div class="video-grid">
+        <div class="video-card">
+            <div class="video-title">벌써 입대 5주차야 연서야~!</div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/wGrVVgC06Ak" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-title">뽀로로 고래 노래 영상</div>
+            <div class="video-container">
+                <video controls>
+                    <source src="GoRaesing.mp4" type="video/mp4">
+                    브라우저가 비디오 태그를 지원하지 않습니다.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-btn">← 쫑이를 기다리는 연서를 위한 일정표로 돌아가기</a>
+
+</body>
+</html>
